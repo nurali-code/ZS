@@ -60,70 +60,7 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 40, }, 300,)
         $('header, .btn-menu').removeClass('active');
     })
-    /*---------------------------------------------------end*/
-    $('.guarantee-slider').slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        swipeToSlide: true,
-        centerMode: false,
-        slidesToScroll: 1,
-        variableWidth: false,
-        responsive: [
-            {
-                breakpoint: 1500,
-                settings: {
-                    slidesToShow: 2,
-                }
-            },
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: true,
-                    slidesToScroll: 1,
-                    variableWidth: false,
-                }
-            },
-        ]
-    });
-
-    $('.slider').slick({
-        dots: false,
-        arrows: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 4,
-        swipeToSlide: true,
-        centerPadding: '0',
-        centerMode: true,
-        slidesToScroll: 1,
-        variableWidth: false,
-        responsive: [
-            {
-                breakpoint: 1500,
-                settings: {
-                    slidesToShow: 3,
-                    centerMode: true,
-                    slidesToScroll: 1,
-                    variableWidth: false,
-                }
-            },
-            {
-                breakpoint: 700,
-                settings: {
-                    slidesToShow: 1,
-                    centerMode: true,
-                    centerPadding: '15px',
-                    slidesToScroll: 1,
-                    variableWidth: false,
-                }
-            },
-        ]
-    });
-
+    
     /*---------------------------------------------------end*/
 
     $(window).scroll(function () {
@@ -133,14 +70,15 @@ $(document).ready(function () {
             $(".scroll-up").fadeOut(300);
         }
     });
+
     /*---------------------------------------------------end*/
 
     $('input[type="tel"]').inputmask({ "mask": "8-999-999-99-99" });
 
     /*---------------------------------------------------end*/
     $('.dropdown-btn').click(function () {
-        $(this).next('.dropdown-content').slideDown();
-        $(this).remove();
+        $(this).addClass('active');
+        $(this).next('.dropdown-content').slideToggle();
     });
     /*---------------------------------------------------end*/
 

@@ -34,9 +34,13 @@ h1
     text-transform: uppercase
 
 h2
-    font-size: 46px
-    transform: translateX(-90px)
+    font-weight: normal
+    font-size: 60px
     margin-bottom: 33px
+    width: 100%
+    max-width: 1440px
+    padding: 0 32px
+    margin: 0 auto 64px
 
 h3
     font-size: 32px
@@ -99,6 +103,11 @@ section
     padding: 18px 30px 16px
     min-width: 200px
     background-color: $yelow
+    img 
+        display: inline-block
+        vertical-align: middle
+        max-width: 30px
+        margin: 0 4px 0 0
 
     &-menu
         z-index: 9999
@@ -157,6 +166,8 @@ section
         &:hover
             background-color: $black
             color: #fff
+            img 
+                filter: invert(1)
 
         &.loading
             background-color: rgba(#fff, .3)
@@ -365,6 +376,24 @@ textarea
     padding: 8px 10px 0
     height: unset
 
+.dropdown
+    border-top: 1px solid #000
+    &:last-child
+        border-bottom: 1px solid #000
+    p
+        margin: 0
+
+    &-btn
+        padding: 15px 60px 15px 30px
+        font-weight: 500
+        line-height: 140%
+        font-size: 18px
+
+    &-content
+        background-color: rgba(0, 0, 0, .03)
+        padding: 10px 30px 20px
+        display: none
+
 @media screen and ( max-width: 1500px )
     .container
         max-width: 1200px
@@ -375,7 +404,7 @@ textarea
         margin-bottom: 15px
 
     h2
-        font-size: 42px
+        font-size: 50px
 
     h3
         font-size: 36px

@@ -51,46 +51,97 @@
         pointer-events: none
         z-index: 1
 
-.guarantee
-    &-title
-        max-width: 540px
-        margin: 0 auto
-
-    &-img,
-    &-slider
-        width: 55%
-        position: relative
-        z-index: 1
+.list
+    .wrap
+        justify-content: center
+        gap: 1%
+    .item
+        display: block
+        width: 290px
+        max-width: 19%
         text-align: center
+        background-repeat: no-repeat
+        background-position: center bottom -100%
+
+        .img
+            width: 100%
+            height: 240px
+            display: flex
+            align-items: flex-end
+            justify-content: center
+            padding-bottom: 20px
+            position: relative
+            z-index: 1
+            margin-bottom: 15px
+            transition: inherit
+            img
+                max-width: 80%
+                max-height: 95%
+                position: relative
+                z-index: 1
+                object-fit: contain
+            &::before
+                transition: inherit
+                content: ''
+                display: block
+                width: 100%
+                height: 50%
+                position: absolute
+                bottom: 0
+                left: 0
+                background-color: #eee
+
+        p
+            transition: inherit
+            font-size: 20px
+            font-style: normal
+            font-weight: 500
+            margin: 0
+
+        &:hover
+            opacity: 1
+            text-decoration: underline
+            background-image: url('../img/arrow-down.svg')
+            background-position: center bottom 
+
+            .img, p
+                transform: translateY(-70px)
+            .img
+                padding: 0
+                &::before
+                    opacity: 0
+
+.guarantee
+    overflow: hidden
+    .container
         &::before
             content: ''
             display: block
-            width: 100%
-            height: 65%
-            bottom: 50%
-            transform: translateY(50%)
-            left: 0
+            width: 100vw
+            height: calc( 100% + 70px )
             position: absolute
-            z-index: -1
-            background-color: rgba($yelow, .9)
-            border-radius: 200px 0 0 200px
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0.2
+            z-index: -100
+            pointer-events: none
+            background: linear-gradient(90deg, $yelow 0%, rgba($yelow, 0.00) 100%)
+
+    &-title
+        max-width: 45%
+        margin: 0 auto 0 0
+
+    &-img
+        width: 55%
+        position: absolute
+        top: 60%
+        right: 0
+        z-index: 1
+        text-align: center
+        transform: translate(0, -50% )
         img
             max-width: 90%
-
-    &-slider
-        display: flex
-        padding: 60px 0
-        &::before
-            width: 80%
-            left: 0
-            height: 100%
-            border-radius: 0
-
-        .slick
-            &-prev
-                display: none
-            &-next
-                right: -30px
 
     &-item
         width: 310px
@@ -104,10 +155,6 @@
             object-fit: cover
         a
             opacity: 1 !important
-
-    &-bottom
-        .guarantee-title
-            max-width: 30%
 
 .map
     text-align: center
@@ -163,12 +210,55 @@
             transform: translateX(-50%)
             opacity: .2
 
+.faq
+    overflow: hidden
+    .container
+        &::before
+            content: ''
+            display: block
+            width: 100vw
+            height: calc( 100% + 70px )
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0.2
+            z-index: -100
+            pointer-events: none
+            background: linear-gradient(90deg, $yelow 0%, rgba($yelow, 0.00) 100%)
+
+    .left
+        width: 63%
+    .title
+        width: 34%
+
+.team
+
+    .item
+        background-color: $yelow
+        width: 32%
+        padding: 42px 0
+        &__img
+            display: block
+            width: 100%
+            margin-bottom: 35px
+
+        .phone
+            padding: 0 45px
+            margin: 0 0 14px
+
+        .btn
+            margin: 12px 0 0 42px
+            text-transform: none
+            font-weight: 500
+            padding: 13px 25px 12px
+
 @media screen and ( max-width: 1500px )
     .main
-        
+
 @media screen and ( max-width: 1200px )
     .main
-        
+
     .guarantee
         &-title
             padding: 0 15px
@@ -224,5 +314,5 @@
 
 @media screen and ( max-width: 700px )
     .main
-        
+
 @import 'footer'
