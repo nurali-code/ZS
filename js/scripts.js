@@ -77,7 +77,7 @@ $(document).ready(function () {
 
     /*---------------------------------------------------end*/
     $('.dropdown-btn').click(function () {
-        $(this).addClass('active');
+        $(this).toggleClass('active');
         $(this).next('.dropdown-content').slideToggle();
     });
     /*---------------------------------------------------end*/

@@ -52,16 +52,34 @@
         z-index: 1
 
 .list
+    h2
+        font-weight: 900
+
     .wrap
         justify-content: center
         gap: 1%
+
     .item
         display: block
         width: 290px
-        max-width: 19%
+        max-width: 18%
         text-align: center
-        background-repeat: no-repeat
-        background-position: center bottom -100%
+        position: relative
+        z-index: 1
+        &::after
+            content: ''
+            display: block
+            width: 100%
+            height: 50px
+            background-repeat: no-repeat
+            background-image: url('../img/arrow-down.svg')
+            background-position: center bottom
+            opacity: 0
+            position: absolute
+            bottom: 0
+            transform: translateY(40px)
+            transition: inherit
+            pointer-events: none
 
         .img
             width: 100%
@@ -75,11 +93,12 @@
             margin-bottom: 15px
             transition: inherit
             img
-                max-width: 80%
+                max-width: 75%
                 max-height: 95%
                 position: relative
                 z-index: 1
                 object-fit: contain
+
             &::before
                 transition: inherit
                 content: ''
@@ -101,11 +120,11 @@
         &:hover
             opacity: 1
             text-decoration: underline
-            background-image: url('../img/arrow-down.svg')
-            background-position: center bottom 
-
             .img, p
-                transform: translateY(-70px)
+                transform: translateY(-60px)
+            &::after
+                opacity: 1
+                transform: translateY(0px)
             .img
                 padding: 0
                 &::before
@@ -229,11 +248,73 @@
 
     .left
         width: 63%
+
     .title
         width: 34%
 
-.team
+.rent
+    overflow: hidden
+    h2
+        font-weight: 400
+        b
+            font-weight: 900
 
+    .container
+        position: relative
+        z-index: 1
+        &::before
+            content: ''
+            display: block
+            width: 500px
+            height: 130%
+            position: absolute
+            bottom: 0
+            right: -20%
+            z-index: -1
+            background-color: rgba($yelow, .3)
+
+    &__img
+        position: absolute
+        top: 0
+        right: -18%
+        height: 100%
+        width: 75%
+        object-fit: contain
+
+    &__text
+        max-width: 65%
+
+    .wrap
+        width: 600px
+        margin-top: 50px
+        gap: 16px 2%
+        align-items: stretch
+
+    .item
+        width: 49%
+        padding: 32px 18px
+        text-align: center
+        background-color: rgba($yelow, .3)
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        h3
+            font-size: 16px
+            font-weight: 700
+            font-size: 19px
+            margin-bottom: 13px
+
+        p
+            font-size: 14px
+            font-style: normal
+            font-weight: 400
+            margin: 0
+
+        &:nth-child(2)
+            background-color: $yelow
+
+.team
     .item
         background-color: $yelow
         width: 32%

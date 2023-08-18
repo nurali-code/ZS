@@ -41,6 +41,8 @@ h2
     max-width: 1440px
     padding: 0 32px
     margin: 0 auto 64px
+    position: relative
+    z-index: 11
 
 h3
     font-size: 32px
@@ -103,7 +105,7 @@ section
     padding: 18px 30px 16px
     min-width: 200px
     background-color: $yelow
-    img 
+    img
         display: inline-block
         vertical-align: middle
         max-width: 30px
@@ -166,7 +168,7 @@ section
         &:hover
             background-color: $black
             color: #fff
-            img 
+            img
                 filter: invert(1)
 
         &.loading
@@ -384,10 +386,33 @@ textarea
         margin: 0
 
     &-btn
+        width: 100%
         padding: 15px 60px 15px 30px
         font-weight: 500
         line-height: 140%
         font-size: 18px
+        position: relative
+        text-align: left
+        z-index: 1
+        // background-color: red
+        &::after
+            content: ''
+            display: inline-block
+            width: 30px
+            height: 30px
+            position: absolute
+            top: 50%
+            right: 30px
+            transform: translateY(-50%) 
+            z-index: -1
+            background-repeat: no-repeat
+            background-image: url('../img/arrow-down.svg')
+            background-position: center center
+            background-size: contain
+            transition: inherit
+        &.active
+            &::after
+                transform: translateY(-50%) rotate(-180deg)
 
     &-content
         background-color: rgba(0, 0, 0, .03)
