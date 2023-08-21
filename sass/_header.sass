@@ -67,21 +67,6 @@ header
         border-bottom: 1px solid rgba(255, 255, 255, .20)
         padding: 14px 0
         position: relative
-        &::before
-            content: ''
-            display: block
-            height: 100%
-            position: absolute
-            top: 0
-            right: 0
-            width: 80%
-            z-index: -1
-            pointer-events: none
-            border-bottom: 1px solid transparent
-            border-image: linear-gradient(to right, rgba(0, 0, 0, 0) 18%, #000) 1
-
-        .logo
-            max-width: 100px
 
         .nav
             position: fixed
@@ -142,7 +127,6 @@ header
 
     @media screen and ( max-width: 700px )
         padding: 10px 0
-        margin-bottom: 10px
         .logo
             top: 5px
 

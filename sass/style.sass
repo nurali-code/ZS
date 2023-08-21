@@ -52,8 +52,6 @@
         z-index: 1
 
 .list
-    h2
-        font-weight: 900
 
     .wrap
         justify-content: center
@@ -334,8 +332,25 @@
             font-weight: 500
             padding: 13px 25px 12px
 
+@import 'help'
+
+
+
 @media screen and ( max-width: 1500px )
     .main
+        &::before
+            left: calc((100% - 1100px)/2)
+
+        .container
+            min-height: 700px
+            height: 90vh
+
+        &__img
+            right: -10%
+            bottom: 12%
+            width: 80%
+            pointer-events: none
+            z-index: 1
 
 @media screen and ( max-width: 1200px )
     .main

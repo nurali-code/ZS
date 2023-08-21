@@ -71,7 +71,7 @@
     </main>
 
     <section class="list">
-        <h2>наша продукция</h2>
+        <h2>Наша <b>продукция</b></h2>
         <div class="wrap">
             <a class="item" href="#">
                 <div class="img"><img src="img/disel.png" alt="disel"></div>
@@ -93,6 +93,72 @@
                 <div class="img"><img src="img/eq.png" alt="disel"></div>
                 <p>Запчасти <br> и дополнения</p>
             </a>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="container">
+            <div class="left">
+                <navbar class="navbar">
+                    <a href="#">
+                        <img src="img/settings.svg" alt="img">
+                        <span class="text">Запчасти и дополнения</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/settings.svg" alt="img">
+                        <span class="text">Бензиновые ­погрузчики</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/settings.svg" alt="img">
+                        <span class="text">Дополнительное оборудование</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/settings.svg" alt="img">
+                        <span class="text">Электро- погрузчики</span>
+                    </a>
+                    <a href="#">
+                        <img src="img/settings.svg" alt="img">
+                        <span class="text">Дизельные ­погрузчики</span>
+                    </a>
+                </navbar>
+                <div class="navbar">
+                    <p class="heading">ТИП ДВИГАТЕЛЯ</p>
+                    <fieldset class="dropdown-content">
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension1" value="Габарит S">
+                            <label for="dimension1">Габарит S</label>
+                        </div>
+                        <div class="inp-radio">
+                            <input type="checkbox" id="dimension2" value="Габарит M">
+                            <label for="dimension2">Габарит M</label>
+                        </div>
+                    </fieldset>
+                    <p class="heading">ГРУЗОПОДЪЕМНОСТЬ</p>
+                    <fieldset class="range_container">
+                        <div class="form_control">
+                            <label for="fromInput">
+                                <i>От</i>
+                                <input type="number" id="fromInput" value="1500" min="1500" max="9900" />
+                            </label>
+                            <label for="toInput">
+                                <i>До</i>
+                                <input type="number" id="toInput" value="9900" min="1500" max="9900" />
+                            </label>
+                        </div>
+                        <div class="sliders_control">
+                            <input id="fromSlider" type="range" value="1500" min="1500" max="9900" />
+                            <input id="toSlider" type="range" value="9900" min="1500" max="9900" />
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="right">
+                <h3 class="heading">Дизельные ­погрузчики</h3>
+                <p>
+                    Одними из наиболее востребованных и высокотехнологичных видов спецтехники JAC являются вилочные автопогрузчики. Именно эта продукция — главный предмет экспорта компании из Поднебесной в Россию и страны СНГ.
+                </p>
+                .
+            </div>
         </div>
     </section>
 
@@ -160,6 +226,25 @@
                     технике
                 </p>
                 <button class="btn black">Здать вопрос</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="help">
+        <div class="container wrap">
+            <img src="img/help.svg" alt="help">
+            <div class="title">
+                <h2>Не можете подобрать погрузчик?</h2>
+                <p>
+                    Быстро подберем оптимальную модель для решения складских задач, сделаем интересное предложение
+                </p>
+            </div>
+            <div class="contact">
+                <a href="tel:+78007757794" class="phone">
+                    <b>+7(800)775-77-94</b>
+                    <span>Телефон для консультации</span>
+                </a>
+                <button class="btn btn-outline" data-modal="modal-form">Подать заявку</button>
             </div>
         </div>
     </section>
