@@ -7,6 +7,7 @@
 // @import 'leasing'
 
 .main
+    padding-top: 50px
     position: relative
     z-index: 1
     overflow: hidden
@@ -23,11 +24,12 @@
         position: absolute
         top: 0
         left: calc((100% - 1300px)/2)
-        background: linear-gradient(180deg, rgba($yelow, 0.00) 0%, rgba($yelow, 0.25) 32.79%, rgba($yelow, 0.25) 64.94%, rgba($yelow, 0.00) 100%)
+        background: linear-gradient(180deg, rgba($yelow, 0.00) 0%, rgba($yelow, 0.50) 32.79%, rgba($yelow, 0.25) 64.94%, rgba($yelow, 0.00) 100%)
         backdrop-filter: blur(10px)
 
     .container
         min-height: 800px
+        max-height: 1080px
         height: 95vh
         display: flex
         flex-direction: column
@@ -40,15 +42,26 @@
         max-width: 800px
         font-size: 90px
 
+    &__text
+        font-weight: 700
+        font-size: 28px
+        margin-bottom: 10px
     &__descr
         max-width: 500px
         font-size: 22px
+        margin-bottom: 40px
 
     &__img
         position: absolute
-        right: -15%
-        bottom: 10%
-        width: 87%
+        // right: -15%
+        right: calc((100% - 1580px)/2)
+
+        // bottom: 10%
+        height: 100%
+        object-fit: contain
+        object-position: center center
+        width: 70%
+        max-width: 1150px
         pointer-events: none
         z-index: 1
 
@@ -130,13 +143,14 @@
 
 .catalog
     padding-top: 0
-    .container 
+    .container
+        max-width: 1400px
         align-items: flex-start
 
     .navbar
         border: 1px solid rgba(0, 0, 0, 0.40)
         background: #FFF
-        padding: 30px 
+        padding: 30px
         margin: 0 0 24px
         a
             display: flex
@@ -164,6 +178,37 @@
 
     .right
         width: calc( 72% - 24px )
+        .wrap
+            justify-content: flex-start
+            align-items: stretch
+            border-top: 1px solid rgba(0, 0, 0, .4)
+            border-left: 1px solid rgba(0, 0, 0, .4)
+
+    .item
+        width: 33.3%
+        display: inline-block
+        padding: 20px
+        border-right: 1px solid rgba(0, 0, 0, .4)
+        border-bottom: 1px solid rgba(0, 0, 0, .4)
+        img
+            width: 90%
+            height: 150px
+            object-fit: contain
+            display: block
+            margin: 0 auto 20px
+            transition: inherit
+
+        span
+            font-size: 20px
+            transition: inherit
+            font-style: normal
+            font-weight: 700
+            text-transform: uppercase
+
+        &:hover
+            opacity: 1
+            & > *
+                opacity: .5
 
 .guarantee
     overflow: hidden
@@ -377,18 +422,57 @@
             left: calc((100% - 1100px)/2)
 
         .container
-            min-height: 700px
+            min-height: 600px
             height: 90vh
+            padding-bottom: 0
+
+        h1
+            font-size: 70px
+
+        &__text
+            font-size: 20px
+        &__descr
+            max-width: 550px
+            font-size: 18px
 
         &__img
-            right: -10%
-            bottom: 12%
-            width: 80%
-            pointer-events: none
+            width: 60%
+            right: calc((100% - 1300px)/2)
             z-index: 1
 
 @media screen and ( max-width: 1200px )
+    .list,
+    .catalog,
+    .guarantee,
+    .map,
+    .faq,
+    .rent,
+    .team,
+    .help
+        display: none
+
     .main
+        padding-top: 600px
+        background: none
+        &::before
+            display: none
+        h1
+            transform: none
+            font-size: 30px
+
+        &__img
+            top: -100%
+            right: auto
+            left: 50%
+            transform: translateX(-50%)
+
+        .container
+            min-height: unset
+            padding: 30px 20px
+            height: unset
+            display: block
+            background: linear-gradient(180deg, rgba($yelow, 0.00) 0%, rgba($yelow, 0.50) 32.79%, rgba($yelow, 0.50) 64.94%, rgba($yelow, 0.00) 100%)
+            // backdrop-filter: blur(10px)
 
     .guarantee
         &-title
@@ -445,5 +529,15 @@
 
 @media screen and ( max-width: 700px )
     .main
+
+    .list,
+    .catalog,
+    .guarantee,
+    .map,
+    .faq,
+    .rent,
+    .team,
+    .help
+        display: none
 
 @import 'footer'

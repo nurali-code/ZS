@@ -1,9 +1,9 @@
 .help
-    .title 
+    .title
         max-width: 50%
         margin: 0 auto 0 50px
 
-    .container 
+    .container
         padding: 60px 0
         &::before
             content: ''
@@ -20,7 +20,6 @@
             background-position: right 25% center
             background-repeat: no-repeat
             pointer-events: none
-            
 
     h2
         width: 100%
@@ -38,7 +37,11 @@
         line-height: 130%
         margin: 0
 
-    .phone 
+    .phone
         display: block
         text-align: right
         margin-bottom: 16px
+
+    @media screen and ( max-width: 1500px )
+        .container
+            max-width: 1200px
