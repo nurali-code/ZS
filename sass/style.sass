@@ -3,6 +3,7 @@
 @import 'header'
 @import 'modal'
 @import 'slick'
+@import 'UI'
 // @import 'leasing'
 
 .main
@@ -52,7 +53,6 @@
         z-index: 1
 
 .list
-
     .wrap
         justify-content: center
         gap: 1%
@@ -127,6 +127,35 @@
                 padding: 0
                 &::before
                     opacity: 0
+
+.catalog
+    .navbar
+        border: 1px solid rgba(0, 0, 0, 0.40)
+        background: #FFF
+        padding: 30px 34px
+        margin: 0 0 30px
+        a
+            display: flex
+            align-items: center
+            gap: 16px
+            font-weight: 500
+            padding: 10px 0
+            border-bottom: 1px solid rgba(0, 0, 0, .2)
+            font-size: 14px
+            font-style: normal
+            font-weight: 500
+            &:last-child
+                border: none
+
+            &.active 
+                text-decoration: underline
+
+    .left
+        width: 25%
+    .right
+        width: 64%
+
+
 
 .guarantee
     overflow: hidden
@@ -333,8 +362,6 @@
             padding: 13px 25px 12px
 
 @import 'help'
-
-
 
 @media screen and ( max-width: 1500px )
     .main
