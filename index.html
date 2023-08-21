@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?ver=1">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
 </head>
 
@@ -114,7 +114,7 @@
                     </a>
                     <a href="#">
                         <img src="img/settings.svg" alt="img">
-                        <span class="text">Электро- погрузчики</span>
+                        <span class="text">Электро - погрузчики</span>
                     </a>
                     <a href="#">
                         <img src="img/settings.svg" alt="img">
@@ -122,32 +122,32 @@
                     </a>
                 </nav>
                 <div class="navbar">
-                    <p class="heading">ТИП ДВИГАТЕЛЯ</p>
-                    <fieldset class="dropdown-content">
+                    <p class="navbar__heading">ТИП ДВИГАТЕЛЯ</p>
+                    <fieldset>
                         <div class="inp-radio">
-                            <input type="checkbox" id="dimension1" value="Габарит S">
-                            <label for="dimension1">Габарит S</label>
+                            <input type="radio" id="item1" checked name="item" value="Дизельные">
+                            <label for="item1">Дизельные (15)</label>
                         </div>
                         <div class="inp-radio">
-                            <input type="checkbox" id="dimension2" value="Габарит M">
-                            <label for="dimension2">Габарит M</label>
+                            <input type="radio" id="item2" name="item" value="Бензиновые">
+                            <label for="item2">Бензиновые (6)</label>
                         </div>
                     </fieldset>
-                    <p class="heading">ГРУЗОПОДЪЕМНОСТЬ</p>
+                    <p class="navbar__heading">ГРУЗОПОДЪЕМНОСТЬ</p>
                     <fieldset class="range_container">
                         <div class="form_control">
                             <label for="fromInput">
                                 <i>От</i>
-                                <input type="number" id="fromInput" value="1500" min="1500" max="9900" />
+                                <input type="number" id="fromInput" value="1" min="1" max="10" />
                             </label>
                             <label for="toInput">
                                 <i>До</i>
-                                <input type="number" id="toInput" value="9900" min="1500" max="9900" />
+                                <input type="number" id="toInput" value="10" min="1" max="10" />
                             </label>
                         </div>
                         <div class="sliders_control">
-                            <input id="fromSlider" type="range" value="1500" min="1500" max="9900" />
-                            <input id="toSlider" type="range" value="9900" min="1500" max="9900" />
+                            <input id="fromSlider" type="range" value="1" min="1" max="10" />
+                            <input id="toSlider" type="range" value="10" min="1" max="10" />
                         </div>
                     </fieldset>
                 </div>
@@ -488,9 +488,9 @@
     <a href="#body" class="scroll-up"></a>
 
     <script src="./js/jquery-3.4.1.min.js" defer></script>
-    <script src="./js/slick.min.js" defer></script>
     <script src="./js/jquery.inputmask.min.js" defer></script>
-    <script src="./js/scripts.js?ver=1" defer></script>
+    <script src="./js/range.js" defer></script>
+    <script src="./js/scripts.js" defer></script>
     <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 </body>

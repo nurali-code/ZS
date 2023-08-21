@@ -129,17 +129,20 @@
                     opacity: 0
 
 .catalog
+    .container 
+        align-items: flex-start
+
     .navbar
         border: 1px solid rgba(0, 0, 0, 0.40)
         background: #FFF
         padding: 30px 34px
-        margin: 0 0 30px
+        margin: 0 0 24px
         a
             display: flex
             align-items: center
-            gap: 16px
+            gap: 14px
             font-weight: 500
-            padding: 10px 0
+            padding: 12px 0
             border-bottom: 1px solid rgba(0, 0, 0, .2)
             font-size: 14px
             font-style: normal
@@ -147,15 +150,19 @@
             &:last-child
                 border: none
 
-            &.active 
+            &.active
                 text-decoration: underline
 
+        &__heading
+            font-size: 18px
+            font-weight: 500
+            margin-bottom: 20px
+
     .left
-        width: 25%
+        width: 28%
+
     .right
-        width: 64%
-
-
+        width: calc( 72% - 24px )
 
 .guarantee
     overflow: hidden

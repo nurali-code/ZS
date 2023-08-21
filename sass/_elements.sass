@@ -177,7 +177,7 @@ section
             background-color: transparent
             border: 1px solid #fff
             color: #fff
-            &:hover 
+            &:hover
                 opacity: 1
                 background-color: #fff
                 color: #000
@@ -320,7 +320,7 @@ hr
 
 fieldset
     border: none
-    margin: 0
+    margin: 0 0 30px
     padding: 0
     &.checkbox
         display: inline-block
@@ -361,6 +361,40 @@ fieldset
                     transform: scale(.5) translateY(-50%)
                     border-color: rgba($yelow, 1)
                     background-color: rgba($yelow, 1)
+
+.inp
+    &-radio
+        label
+            font-size: 16px
+            font-style: normal
+            font-weight: 400
+            line-height: 20px
+            position: relative
+            padding: 5px 0 5px 30px
+            cursor: pointer
+            margin: 0
+            &::before,
+            &::after
+                content: ''
+                display: inline-block
+                width: 20px
+                height: 20px
+                position: absolute
+                top: 50%
+                left: 0
+                transform: translateY(-50%)
+                border: 1px solid #000
+                border-radius: 50%
+            &::after
+                border-color: $yelow
+                background-color: $yelow
+                transform: scale(0) translateY(-50%)
+                transition: all ease .3s
+                transform-origin: 50% 0%
+        input
+            display: none
+            &:checked ~ label::after
+                transform: scale(.5) translateY(-50%)
 
 input[name="volume"]
     background-image: url('../img/kg.svg')
@@ -406,7 +440,7 @@ textarea
             position: absolute
             top: 50%
             right: 30px
-            transform: translateY(-50%) 
+            transform: translateY(-50%)
             z-index: -1
             background-repeat: no-repeat
             background-image: url('../img/arrow-down.svg')
