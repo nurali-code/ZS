@@ -362,7 +362,7 @@ fieldset
                     border-color: rgba($yelow, 1)
                     background-color: rgba($yelow, 1)
 
-    input 
+    input
         margin: 0
 
 .inp
@@ -427,14 +427,13 @@ textarea
 
     &-btn
         width: 100%
-        padding: 15px 60px 15px 30px
+        padding: 15px 60px 15px 25px
         font-weight: 500
-        line-height: 140%
+        line-height: 135%
         font-size: 18px
         position: relative
         text-align: left
         z-index: 1
-        // background-color: red
         &::after
             content: ''
             display: inline-block
@@ -442,7 +441,7 @@ textarea
             height: 30px
             position: absolute
             top: 50%
-            right: 30px
+            right: 20px
             transform: translateY(-50%)
             z-index: -1
             background-repeat: no-repeat
@@ -493,6 +492,7 @@ textarea
         font-size: 50px
 
     h2
+        padding: 0 15px
         font-size: 32px
 
     h3
@@ -512,6 +512,16 @@ textarea
         font-size: 14px
         padding: 20px 24px 19px
         min-width: 200px
+
+    .dropdown
+        &-btn
+            padding: 15px 60px 15px 20px
+            font-size: 16px
+            &::after
+                right: 15px
+
+        &-content
+            padding: 10px 20px 20px
 
 @media screen and ( max-width: 900px )
     h1
@@ -549,4 +559,8 @@ textarea
         height: 55px
 
     label
+        font-size: 14px
+
+    .dropdown-btn
+        padding: 8px 60px 8px 10px
         font-size: 14px

@@ -357,7 +357,7 @@
             z-index: -1
             background-color: rgba($yelow, .3)
 
-    &__img
+    &-img
         position: absolute
         top: 0
         right: -18%
@@ -384,7 +384,6 @@
         justify-content: center
         align-items: center
         h3
-            font-size: 16px
             font-weight: 700
             font-size: 19px
             margin-bottom: 13px
@@ -522,15 +521,57 @@
             span
                 font-size: 16px
 
-    .map,
-    .faq,
-    .rent,
-    .team,
-    .help
+    .faq
+        h2
+            margin-bottom: 50px
+
+        .container
+            display: block
+            &::before
+                height: calc(100% + 50px)
+
+        .left, .title
+            width: 100%
+
+        .title
+            padding: 30px 0 0
+            p
+                margin-bottom: 20px
+
+    .rent
+        .container
+            &::before
+                display: none
+        h2
+            margin-bottom: 20px
+        &-img
+            display: block
+            margin: 0
+            position: relative
+            width: 100%
+            right: auto
+            top: -40px
+            z-index: 1
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 230px
+                position: absolute
+                bottom: 0
+                right: 0
+                z-index: -1
+                background-color: rgba($yelow, .3)
+
+        .wrap
+            margin: 0 auto
+            width: 100%
+
+    .team
         display: none
 
     .guarantee
-        h2 
+        h2
             margin-bottom: 30px
 
         &-title
@@ -538,10 +579,12 @@
             max-width: 100%
 
         &-img
-            width: 700px
+            width: 100%
+            max-width: 100%
             position: static
             transform: none
             margin: 0 auto 80px
+
         p
             margin: 0
 
@@ -600,12 +643,42 @@
                 font-weight: 600
                 font-size: 14px
 
-    .guarantee,
-    .map,
-    .faq,
-    .rent,
-    .team,
-    .help
+    .guarantee
+        h2
+            margin-bottom: 20px
+
+        &-img
+            margin-bottom: 60px
+
+        &-title
+            padding: 0
+
+    .faq
+
+    .rent
+        overflow: hidden
+        &__text
+            max-width: 100%
+        &-img
+            top: 0
+            left: -15px
+            width: 100vw
+            margin: 80px 0 20px
+            img
+                transform-origin: 80% 100%
+                transform: scale(1.2)
+        .item
+            padding: 20px 10px
+            width: 100%
+            max-width: 400px
+            margin: 0 auto
+            h3
+                font-size: 16px
+                text-transform: none
+
+            p
+                font-size: 12px
+    .team
         display: none
 
 @import 'footer'

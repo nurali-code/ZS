@@ -45,3 +45,52 @@
     @media screen and ( max-width: 1500px )
         .container
             max-width: 1200px
+
+    @media screen and ( max-width: 1200px )
+        img 
+            margin: 0 0 20px 40px
+            display: none
+
+        h2 
+            margin-bottom: 5px
+
+        .container
+            display: block
+            padding: 40px 32px 45px
+            // max-width: 600px
+
+            &::before
+                background-image: none
+                height: 100%
+                transform: none
+                left: 0
+                bottom: 0
+                top: auto 
+                width: 100%
+
+        .title
+            max-width: 100%
+            margin: 0 auto 30px
+
+        .phone
+            text-align: left
+            max-width: 300px
+            margin: 0 
+
+        .contact 
+            display: flex
+            flex-wrap: wrap
+            flex-direction: row-reverse
+            justify-content: flex-end
+            align-items: center
+            gap: 25px
+            margin: 0 auto 0 0
+
+    @media screen and ( max-width: 700px )
+        .container 
+            padding: 30px 22px 35px
+        h2 
+            font-size: 30px
+        p 
+            font-size: 16px
+    
