@@ -147,6 +147,7 @@
 
 .catalog
     padding-top: 0
+
     .container
         max-width: 1400px
         align-items: flex-start
@@ -213,6 +214,11 @@
             opacity: 1
             & > *
                 opacity: .5
+
+    .content
+        display: none
+        &.active
+            display: block
 
 .guarantee
     overflow: hidden
@@ -617,15 +623,15 @@
 @media screen and ( max-width: 700px )
     .main
         h1
-            font-size: 30px
+            font-size: 33px
 
         .container
             padding: 40px 20px
             max-width: 94%
 
-        &__text
-            font-size: 18px
+        &__text,
         &__descr
+            font-size: 16px
             font-size: 16px
 
     .list
