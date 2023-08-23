@@ -401,7 +401,7 @@
     .item
         background-color: $yelow
         width: 32%
-        padding: 42px 0
+        padding: 20px 0 40px
         &__img
             display: block
             width: 100%
@@ -567,9 +567,6 @@
             margin: 0 auto
             width: 100%
 
-    .team
-        display: none
-
     .guarantee
         h2
             margin-bottom: 30px
@@ -600,6 +597,22 @@
             font-size: 12px
             padding: 8px 35px 6px 15px
             background-position: center right 15px
+
+    .team
+        .wrap
+            justify-content: flex-start
+            flex-wrap: nowrap
+            gap: 14px
+            overflow-x: scroll
+            padding: 15px 20px
+        .item
+            width: 290px
+            min-width: 290px
+            .phone
+                padding: 0 0 0 30px
+
+            .btn
+                margin-left: 30px
 
 @media screen and ( max-width: 700px )
     .main
@@ -678,7 +691,7 @@
 
             p
                 font-size: 12px
+
     .team
-        display: none
 
 @import 'footer'
