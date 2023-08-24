@@ -14,9 +14,9 @@
         z-index: -1
         background-color: rgba($yelow, .6)
         // transform: skew(-30deg)
+
     .container
-        // background-color: red
-        padding: 60px 0 200px 
+        padding: 60px 32px 200px
         max-width: 1100px
 
     &__img
@@ -28,6 +28,7 @@
 
     h2
         margin-bottom: 0
+
     p
         max-width: 400px
         margin-bottom: 40px
@@ -55,40 +56,43 @@
     form
         max-width: 400px
 
-    @media screen and ( max-width: 900px )
+    @media screen and ( max-width: 1100px )
         .wrap
             display: block
 
-        .title
-            h2
-                font-size: 26px
+        .container
+            padding: 120px 32px 50px
+
+        &__img
+            z-index: -111
+            right: -43%
+            width: 100%
+
+        form
+            padding: 20px
+            background-color: #fff
+
+        .logos
+            width: 100%
+            bottom: auto
+            top: 20%
+
+    @media screen and ( max-width: 700px )
+        .logos
+            height: 55px
+            top: 18%
+
+        &__img
+            object-fit: cover
+            object-position: left top
+            height: 100%
+            right: auto 
+            left: 30%
 
         .container
-            box-shadow: 0 0 8px rgb(165 165 165 / 24%)
-        .logos
-            width: calc( 100% + 60px )
-            position: relative
-            max-width: unset
-            left: -30px
-            margin-bottom: 25px
-
-        .form
-            &-title
-                background-size: cover
-                height: 265px
-                p
-                    font-size: 15px
-            &-inps
-                // max-width: 300px
-                padding: 0 20px 40px
-                display: block
-                .btn
-                    max-width: unset
-
-        h3
-            font-weight: 600
-            font-size: 20px
-            margin-bottom: 5px
+            padding: 100px 15px 50px
+            p
+                max-width: 58%
 
 @keyframes run
     0%
