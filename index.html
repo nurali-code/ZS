@@ -22,7 +22,6 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
 </head>
 
 <body id="body">
@@ -31,11 +30,11 @@
         <div class="container wrap">
             <img src="img/logo-2.png" alt="Жёлтый Слон" class="logo">
             <ul class="nav wrap">
-                <li><a href="#features">Каталог</a></li>
-                <li><a href="#photoshoot">Сервис</a></li>
+                <li><a href="#list">Каталог</a></li>
+                <li><a href="#guarantee">Сервис</a></li>
                 <li><a href="#comparison">Запчасти</a></li>
-                <li><a href="#contacts">Лизинг</a></li>
-                <li><a href="#contacts">Аренда</a></li>
+                <li><a href="#leasing">Лизинг</a></li>
+                <li><a href="#rent">Аренда</a></li>
                 <li class="hidden">
                     <a href="tel:+78007757794" class="phone">
                         <span>Телефон:</span>
@@ -72,7 +71,7 @@
         </div>
     </main>
 
-    <section class="list">
+    <section class="list" id="list">
         <h2>Наша <b>продукция</b></h2>
         <div class="wrap">
             <a class="item" href="#">
@@ -156,69 +155,16 @@
             </div>
             <div class="right">
                 <div class="content active">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped bg-primary" style="width: 25%" role="progressbar"
-                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Text</div>
+                    <div class="wrap content-title">
+                        <h3 class="heading">Электрические <br> вилочные погрузчики</h3>
+                        <p class="text">
+                            Вилочный электропогрузчик оснащен электродвигателем и надежным аккумулятором с долгим сроком
+                            службы.
+                            Используя вилочные электропогрузчики Вам не нужно беспокоиться об излишним шуме, создаваемым
+                            погрузчиком, и о загрязнении воздуха.
+                        </p>
                     </div>
-                    <h3 class="heading">Дизельные ­погрузчики</h3>
-                    <p>
-                        Одними из наиболее востребованных и высокотехнологичных видов спецтехники JAC являются вилочные
-                        автопогрузчики. Именно эта продукция — главный предмет экспорта компании из Поднебесной в Россию
-                        и
-                        страны СНГ.
-                    </p>
-                    <div class="wrap">
-                        <button class="item">
-                            <img src="img/electro.png" alt="item">
-                            <span>CPD SHANN</span>
-                        </button>
-                        <button class="item">
-                            <img src="img/electro.png" alt="item">
-                            <span>CPD SHANN</span>
-                        </button>
-                        <button class="item">
-                            <img src="img/electro.png" alt="item">
-                            <span>CPD SHANN</span>
-                        </button>
-                        <button class="item">
-                            <img src="img/electro.png" alt="item">
-                            <span>CPD SHANN</span>
-                        </button>
-                        <button class="item">
-                            <img src="img/electro.png" alt="item">
-                            <span>CPD SHANN</span>
-                        </button>
-                        <button class="item">
-                            <img src="img/electro.png" alt="item">
-                            <span>CPD SHANN</span>
-                        </button>
-                        <button class="item">
-                            <img src="img/electro.png" alt="item">
-                            <span>CPD SHANN</span>
-                        </button>
-                        <button class="item">
-                            <img src="img/electro.png" alt="item">
-                            <span>CPD SHANN</span>
-                        </button>
-                        <button class="item">
-                            <img src="img/electro.png" alt="item">
-                            <span>CPD SHANN</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="content">
-                    <h3 class="heading">Электрические вилочные погрузчики</h3>
-                    <p>
-                        Вилочный электропогрузчик оснащен электродвигателем и надежным аккумулятором с долгим сроком
-                        службы.
-                        Используя вилочные электропогрузчики Вам не нужно беспокоиться об излишним шуме, создаваемым
-                        погрузчиком, и о загрязнении воздуха.
-                    </p>
-                    <div class="wrap">
-                        <button class="item">
-                            <img src="img/electro.png" alt="item">
-                            <span>CPD SHANN</span>
-                        </button>
+                    <div class="wrap item-wrap">
                         <button class="item">
                             <img src="img/electro.png" alt="item">
                             <span>CPD SHANN</span>
@@ -276,7 +222,7 @@
         </div>
     </section>
 
-    <section class="guarantee">
+    <section class="guarantee" id="guarantee">
         <h2><b>Сервис</b> <br> и гарантия</h2>
         <div class="guarantee-img">
             <img src="img/map.webp" alt="map">
@@ -344,7 +290,7 @@
         </div>
     </section>
 
-    <section class="leasing">
+    <section class="leasing" id="leasing">
         <h2>Купить <b>погрузчик</b> <br> <b> в лизинг</b> за 45 МИНУТ</h2>
         <div class="container">
             <p>
@@ -370,7 +316,7 @@
         <div class="logos"></div>
     </section>
 
-    <section class="rent">
+    <section class="rent" id="rent">
         <h2><b>Аренда вилочных <br> погрузчиков </b> на любой срок</h2>
         <div class="container">
             <p class="rent__text">
@@ -524,7 +470,7 @@
         <div class="modal-content">
             <button class="modal-close">&#x2715;</button>
             <h3>Подать <b>заявку</b></h3>
-            <form onsubmit="ym(94102714, 'reachGoal', 'zayavka'); return true;" action="./sendmail.php" method="post">
+            <form action="./sendmail.php" method="post">
                 <fieldset>
                     <label>Как вас зовут <i>*</i></label>
                     <input type="text" name="name" required placeholder="Как вас зовут?">
@@ -542,78 +488,12 @@
         </div>
     </div>
 
-    <div class="modal" id="modal-quote">
-        <div class="modal-content">
-            <button class="modal-close">&#x2715;</button>
-            <h3><b>КОММЕРЧЕСКОЕ</b> ПРЕДЛОЖЕНИЕ</h3>
-            <form onsubmit="ym(94102714, 'reachGoal', 'zayavka'); return true;" action="./sendmail.php" method="post">
-                <input type="hidden" name="hours" value="serv">
-                <div class="wrap">
-                    <fieldset>
-                        <label>Грузоподёмность</label>
-                        <select name="capacity" id="capacity">
-                            <option value="1500 кг">1500 кг</option>
-                            <option value="2000 кг">2000 кг</option>
-                            <option value="2500 кг">2500 кг</option>
-                            <option value="3000 кг">3000 кг</option>
-                            <option value="3500 кг">3500 кг</option>
-                            <option value="4000 кг">4000 кг</option>
-                            <option value="4500 кг">4500 кг</option>
-                            <option value="5000 кг">5000 кг</option>
-                        </select>
-                    </fieldset>
-                    <fieldset>
-                        <label>Высота</label>
-                        <select name="height" id="height">
-                            <option value="3000 мм">3000 мм</option>
-                            <option value="4800 мм">4800 мм</option>
-                            <option value="6000 мм">6000 мм</option>
-                        </select>
-                    </fieldset>
-                </div>
-                <fieldset class="checkbox">
-                    <input type="checkbox" value="Каркас" name="frame" id="frame">
-                    <label for="frame">Каркас</label>
-                </fieldset>
-                <fieldset class="checkbox">
-                    <input type="checkbox" value="Навесное оборудовани" name="equipment" id="equipment">
-                    <label for="equipment">Навесное оборудовани</label>
-                </fieldset>
-                <fieldset class="checkbox">
-                    <input type="checkbox" value="Кабина с отопителем" name="сabin" id="сabin">
-                    <label for="сabin">Кабина с отопителем</label>
-                </fieldset>
-                <fieldset class="checkbox">
-                    <input type="checkbox" value="Смещение вил" name="offcet" id="offcet">
-                    <label for="offcet">Смещение вил</label>
-                </fieldset>
-
-                <hr>
-
-                <fieldset>
-                    <label>Как вас зовут <i>*</i></label>
-                    <input type="text" name="name" required placeholder="Как вас зовут?">
-                </fieldset>
-                <fieldset>
-                    <label>Почта <span class="fade">(необязательно)</span></label>
-                    <input type="email" name="email" placeholder="Ваш e-mail">
-                </fieldset>
-                <fieldset>
-                    <label>Номер телефона <i>*</i></label>
-                    <input type="tel" name="phone_number" required placeholder="Ваш номер телефона">
-                </fieldset>
-                <button type="submit" class="btn">Подать заявку</button>
-            </form>
-        </div>
-    </div>
-
     <a href="#body" class="scroll-up"></a>
 
     <script src="./js/jquery-3.4.1.min.js" defer></script>
     <script src="./js/jquery.inputmask.min.js" defer></script>
-    <script src="./js/range.js" defer></script>
+    <!-- <script src="./js/range.js" defer></script> -->
     <script src="./js/scripts.js" defer></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 </body>
 

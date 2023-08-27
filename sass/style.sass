@@ -2,10 +2,8 @@
 @import 'elements'
 @import 'header'
 @import 'modal'
-// @import 'slick'
 @import 'leasing'
 @import 'UI'
-// @import 'leasing'
 
 .main
     padding-top: 50px
@@ -71,28 +69,36 @@
             pointer-events: none
 
 .list
+    h2 
+        margin-bottom: 100px
     .wrap
         justify-content: center
-        gap: 1%
+        // gap: 1%
 
     .item
         display: block
-        width: 290px
-        max-width: 18%
+        // width: 290px
+        // max-width: 18%
+        width: 20%
         text-align: center
         position: relative
         z-index: 1
+        border: 1px solid rgba(0, 0, 0, 0)
+        border-top: none
+        border-bottom-color: #000
+        padding-bottom: 40px
+        transition: all ease .3s
         &::after
             content: ''
             display: block
-            width: 100%
+            width: 90%
             height: 50px
             background-repeat: no-repeat
             background-image: url('../img/arrow-down.svg')
             background-position: center bottom
             opacity: 0
             position: absolute
-            bottom: 0
+            bottom: 20px
             transform: translateY(40px)
             transition: inherit
             pointer-events: none
@@ -119,11 +125,11 @@
                 transition: inherit
                 content: ''
                 display: block
-                width: 100%
+                width: 90%
                 height: 50%
                 position: absolute
                 bottom: 0
-                left: 0
+                left: 5%
                 background-color: #eee
 
         p
@@ -135,6 +141,8 @@
 
         &:hover
             opacity: 1
+            border-color: #000
+            border-bottom-color: rgba(0, 0, 0, 0)
             text-decoration: underline
             .img, p
                 transform: translateY(-60px)
@@ -147,7 +155,8 @@
                     opacity: 0
 
 .catalog
-    padding-top: 0
+    // display: none
+    padding: 0
 
     .container
         max-width: 1400px
@@ -180,18 +189,17 @@
             margin-bottom: 20px
 
     .left
+        display: none
         width: 28%
 
     .right
-        width: calc( 72% - 24px )
+        // width: calc( 72% - 24px )
+        width: 100%
         .wrap
-            justify-content: flex-start
             align-items: stretch
-            border-top: 1px solid rgba(0, 0, 0, .4)
-            border-left: 1px solid rgba(0, 0, 0, .4)
 
     .item
-        width: 33.3%
+        width: 25%
         display: inline-block
         padding: 20px
         border-right: 1px solid rgba(0, 0, 0, .4)
@@ -216,10 +224,23 @@
             & > *
                 opacity: .5
 
+        &-wrap
+            justify-content: flex-start
+            border-top: 1px solid rgba(0, 0, 0, .4)
+            border-left: 1px solid rgba(0, 0, 0, .4)
+
     .content
         display: none
+        &-title 
+            margin-bottom: 30px
         &.active
             display: block
+
+        .heading,
+        .text
+            max-width: 44%
+        .text
+            max-width: 55%
 
 .guarantee
     overflow: hidden
@@ -519,6 +540,10 @@
 
         .right
             width: 100%
+
+        .content 
+            &-title 
+                display: block
 
         .item
             .img
