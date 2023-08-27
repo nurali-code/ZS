@@ -29,7 +29,7 @@
     .container
         min-height: 800px
         max-height: 1080px
-        height: 95vh
+        height: 100vh
         display: flex
         flex-direction: column
         justify-content: center
@@ -69,8 +69,9 @@
             pointer-events: none
 
 .list
-    h2 
+    h2
         margin-bottom: 100px
+    
     .wrap
         justify-content: center
         // gap: 1%
@@ -139,7 +140,8 @@
             font-weight: 500
             margin: 0
 
-        &:hover
+        &:hover,
+        &.active
             opacity: 1
             border-color: #000
             border-bottom-color: rgba(0, 0, 0, 0)
@@ -155,8 +157,9 @@
                     opacity: 0
 
 .catalog
-    // display: none
-    padding: 0
+    display: none
+    padding: 0 0 100px
+    border-bottom: 1px solid #000
 
     .container
         max-width: 1400px
@@ -229,18 +232,18 @@
             border-top: 1px solid rgba(0, 0, 0, .4)
             border-left: 1px solid rgba(0, 0, 0, .4)
 
-    .content
+    .heading,
+    .text
+        max-width: 44%
+    .text
+        max-width: 55%
+
+    &-content
         display: none
-        &-title 
+        &-title
             margin-bottom: 30px
         &.active
             display: block
-
-        .heading,
-        .text
-            max-width: 44%
-        .text
-            max-width: 55%
 
 .guarantee
     overflow: hidden
@@ -454,7 +457,7 @@
 
         .container
             min-height: 600px
-            height: 90vh
+            height: 93vh
             padding-bottom: 0
 
         h1
@@ -525,9 +528,11 @@
         h2
             margin-bottom: 30px
             text-align: center
+       
         .wrap
             max-width: 700px
             margin: 0 auto
+        
         .item
             width: 30%
             max-width: unset
@@ -541,8 +546,12 @@
         .right
             width: 100%
 
-        .content 
-            &-title 
+        .heading,
+        .text
+            max-width: 100%
+
+        &-content
+            &-title
                 display: block
 
         .item
@@ -676,7 +685,8 @@
             p
                 font-size: 15px
 
-            &:hover
+            &:hover,
+            &.active
                 .img, p
                     transform: translateY(-30px)
 
