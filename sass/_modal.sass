@@ -72,12 +72,17 @@
         opacity: .5
         display: block
         margin-bottom: 5px !important
+
+    &-wrap
+        width: 50%
+        margin: 0 0 0 auto
+
     &-card
         // display: block
         .modal
             &-content
                 max-width: 1100px
-                padding-left: 580px
+                padding: 40px 20px
 
         .wrap
             justify-content: flex-start
@@ -86,7 +91,7 @@
             min-width: unset
             padding: 16px 25px 14px
             font-size: 16px
-            margin: 0 
+            margin: 0
 
         fieldset
             margin: 10px 0
@@ -105,10 +110,10 @@
                     left: 20px
                     top: 50%
                     transform: translateY(-50%)
-                    width: 49%
-                    height: 90%
+                    width: 46%
+                    height: 83%
                     padding: 10px
-                    border: 1px solid #000
+                    border: 1px solid rgba(0, 0, 0, .2)
                     // background-color: red
                     object-fit: contain
                     position: absolute
@@ -125,6 +130,11 @@
             line-height: 25px
             font-size: 14px
 
+        &-card
+            .modal
+                &-content
+                    padding: 40px 20px
+
     @media screen and ( max-width: 700px )
         &-content
             padding: 40px 20px 45px
@@ -140,6 +150,29 @@
 
             .form
                 margin-top: 20px
+
+        &-wrap 
+            width: 100%
+        &-card
+            // display: block
+            .modal
+                &-content
+                    border-radius: 0
+                    max-width: 400px
+                    padding: 50px 15px 20px
+
+            .cat
+                &-item
+                    &__img
+
+                        transform: none
+                        width: 100%
+                        height: unset
+                        position: static
+                        margin-bottom: 14px
+                        // padding: 0
+                        // border: none
+        
 
         &-close
             top: 10px

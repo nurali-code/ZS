@@ -159,12 +159,12 @@
                         <div class="cat-item">
                             <img class="cat-item__img" src="img/F-2.jpg" alt="item">
                             <h3 class="cat-item__heading">ДВС GQ4Y</h3>
-                            <p class="cat-item__text">Высота подъема <b>3 метра</b></p>
+                            <p class="cat-item__text">Грузоподъемность: <b>от 1,5 до 3,5 тонн</b></p>
                         </div>
                         <div class="cat-item">
                             <img class="cat-item__img" src="img/f-1.jpg" alt="item">
                             <h3 class="cat-item__heading">ДВС NISSAN GCT GK25</h3>
-                            <p class="cat-item__text">Высота подъема <b>3 метра</b></p>
+                            <p class="cat-item__text">Грузоподъемность: <b>от 1,5 до 3,5 тонн</b></p>
                         </div>
                     </div>
                 </div>
@@ -459,60 +459,61 @@
 
     <div class="modal modal-card" id="modal-card">
         <div class="modal-content">
-            <div class="cat-content"></div>
-            <fieldset>
-                <p class="modal__text">Грузоподъемность</p>
-                <div class="radio">
-                    <input type="radio" value="1,5 тонн" name="capacity" id="capacity1">
-                    <label for="capacity1">1,5 тонн</label>
+            <div class="modal-wrap">
+                <div class="cat-content"></div>
+                <fieldset>
+                    <p class="modal__text">Грузоподъемность</p>
+                    <div class="radio">
+                        <input type="radio" value="1,5 тонн" name="capacity" id="capacity1">
+                        <label for="capacity1">1,5 тонн</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" value="3,5 тонн" name="capacity" id="capacity2">
+                        <label for="capacity2">3,5 тонн</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" value="6 метров" name="capacity" id="capacity3">
+                        <label for="capacity3">6 метров</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <p class="modal__text">Высота подъема</p>
+                    <div class="radio">
+                        <input type="radio" value="3 метра" name="height" id="height1">
+                        <label for="height1">3 метра</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" value="4,8 метров" name="height" id="height2">
+                        <label for="height2">4,8 метров</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" value="6 метров" name="height" id="height3">
+                        <label for="height3">6 метров</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <p class="modal__text">Дополнительные опции</p>
+                    <div class="checkbox">
+                        <input type="checkbox" value="Свободный ход" name="equipment" id="equipment">
+                        <label for="equipment">Свободный ход</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" value="Кабина с отопителем" name="сabin" id="сabin">
+                        <label for="сabin">Кабина с отопителем</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" value="Навесное оборудовани" name="eq" id="eq">
+                        <label for="eq">Навесное оборудовани</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" value="Смещение вил" name="offcet" id="offcet">
+                        <label for="offcet">Смещение вил</label>
+                    </div>
+                </fieldset>
+                <div class="wrap">
+                    <button class="btn black">Заказать</button>
+                    <!-- <button class="btn btn-outline">нужна консультация</button> -->
                 </div>
-                <div class="radio">
-                    <input type="radio" value="3,5 тонн" name="capacity" id="capacity2">
-                    <label for="capacity2">3,5 тонн</label>
-                </div>
-                <div class="radio">
-                    <input type="radio" value="6 метров" name="capacity" id="capacity3">
-                    <label for="capacity3">6 метров</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <p class="modal__text">Высота подъема</p>
-                <div class="radio">
-                    <input type="radio" value="3 метра" name="height" id="height1">
-                    <label for="height1">3 метра</label>
-                </div>
-                <div class="radio">
-                    <input type="radio" value="4,8 метров" name="height" id="height2">
-                    <label for="height2">4,8 метров</label>
-                </div>
-                <div class="radio">
-                    <input type="radio" value="6 метров" name="height" id="height3">
-                    <label for="height3">6 метров</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <p class="modal__text">Дополнительные опции</p>
-                <div class="checkbox">
-                    <input type="checkbox" value="Свободный ход" name="equipment" id="equipment">
-                    <label for="equipment">Свободный ход</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="Кабина с отопителем" name="сabin" id="сabin">
-                    <label for="сabin">Кабина с отопителем</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="Навесное оборудовани" name="eq" id="eq">
-                    <label for="eq">Навесное оборудовани</label>
-                </div>
-                <div class="checkbox">
-                    <input type="checkbox" value="Смещение вил" name="offcet" id="offcet">
-                    <label for="offcet">Смещение вил</label>
-                </div>
-            </fieldset>
-            <div class="wrap">
-                <button class="btn black">Заказать</button>
-                <button class="btn btn-outline">нужна консультация</button>
-
             </div>
             <button class="modal-close">&#x2715;</button>
         </div>

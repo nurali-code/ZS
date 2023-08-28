@@ -325,13 +325,15 @@ fieldset
     border: none
     margin: 0 0 20px
     padding: 0
+
 .checkbox, .radio
     display: inline-block
     margin-bottom: 5px !important
     label
         cursor: pointer
         display: block
-        padding: 10px 15px 8px 35px
+        font-size: 14px
+        padding: 9px 15px 7px 35px
         border: 1px solid rgba(0, 0, 0, .2)
         position: relative
         &::before,
@@ -353,8 +355,8 @@ fieldset
     input
         display: none
         &:checked + label
-            background-color: rgba($yelow, .22)
-            border-color: rgba($yelow, .22)
+            background-color: rgba($yelow, .33)
+            border-color: rgba($yelow, .44)
             &:before
                 border-width: 2px
                 border-color: rgba($yelow, 1)
@@ -365,8 +367,8 @@ fieldset
                 background-color: rgba($yelow, 1)
 
 .radio
-    label 
-        padding-left: 10px
+    label
+        padding: 8px 10px 6px
         &::before,
         &::after
             display: none
@@ -532,6 +534,24 @@ textarea
 @media screen and ( max-width: 900px )
     h1
         // font-size: 36px
+
+
+    fieldset
+        margin-bottom: 10px
+
+    .checkbox,
+    .radio
+        label
+            font-size: 12px
+            padding: 7px 15px 5px 27px
+            &::before,
+            &::after
+                width: 15px
+                height: 15px
+                left: 7px
+    .radio
+        label
+            padding: 7px 10px 5px
 
 @media screen and ( max-width: 700px )
     .container
