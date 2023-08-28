@@ -325,47 +325,51 @@ fieldset
     border: none
     margin: 0 0 20px
     padding: 0
-    &.checkbox
-        display: inline-block
-        margin-bottom: 5px !important
-        label
-            cursor: pointer
-            display: block
-            padding: 10px 15px 8px 35px
-            border: 1px solid rgba(0, 0, 0, .2)
-            position: relative
-            &::before,
-            &::after
-                content: ''
-                display: inline-block
-                width: 20px
-                height: 20px
-                border: 1px solid #000
-                border-radius: 50%
-                position: absolute
-                top: 50%
-                left: 8px
-                transform: translateY(-50%)
-                box-sizing: border-box
-            &::after
-                transform-origin: 50% 0%
-
-        input
-            display: none
-            &:checked + label
-                background-color: rgba($yelow, .22)
-                border-color: rgba($yelow, .22)
-                &:before
-                    border-width: 2px
-                    border-color: rgba($yelow, 1)
-                    background-color: #fff
-                &::after
-                    transform: scale(.5) translateY(-50%)
-                    border-color: rgba($yelow, 1)
-                    background-color: rgba($yelow, 1)
+.checkbox, .radio
+    display: inline-block
+    margin-bottom: 5px !important
+    label
+        cursor: pointer
+        display: block
+        padding: 10px 15px 8px 35px
+        border: 1px solid rgba(0, 0, 0, .2)
+        position: relative
+        &::before,
+        &::after
+            content: ''
+            display: inline-block
+            width: 20px
+            height: 20px
+            border: 1px solid #000
+            border-radius: 50%
+            position: absolute
+            top: 50%
+            left: 8px
+            transform: translateY(-50%)
+            box-sizing: border-box
+        &::after
+            transform-origin: 50% 0%
 
     input
-        margin: 0
+        display: none
+        &:checked + label
+            background-color: rgba($yelow, .22)
+            border-color: rgba($yelow, .22)
+            &:before
+                border-width: 2px
+                border-color: rgba($yelow, 1)
+                background-color: #fff
+            &::after
+                transform: scale(.5) translateY(-50%)
+                border-color: rgba($yelow, 1)
+                background-color: rgba($yelow, 1)
+
+.radio
+    label 
+        padding-left: 10px
+        &::before,
+        &::after
+            display: none
 
 .inp
     &-radio
