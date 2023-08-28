@@ -29,7 +29,15 @@ $(document).ready(function () {
         }
 
         $('[data-modal]').on('click', function (e) {
-            e.preventDefault(); showModal('#' + $(this).attr("data-modal"));
+            e.preventDefault();
+            showModal('#' + $(this).attr("data-modal"));
+        });
+
+        $('.cat-item').on('click', function (e) {
+            e.preventDefault();
+            var itemContent = $(this).html();
+            $('#modal-card .cat-content').html(itemContent);
+            $('#modal-card').fadeIn(300);
         });
 
         $('.modal-close').on('click', () => { hideModals(); });
@@ -37,7 +45,9 @@ $(document).ready(function () {
         $(document).on('click', function (e) {
             if (!(($(e.target).parents('.modal-content').length) ||
                 ($(e.target).parents('.nav').length) ||
+                ($(e.target).parents('.cat-item').length) ||
                 ($(e.target).hasClass('btn')) ||
+                ($(e.target).hasClass('cat-item')) ||
                 ($(e.target).hasClass('modal-content'))
             )) { hideModals(); }
         });

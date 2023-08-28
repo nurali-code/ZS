@@ -71,7 +71,7 @@
 .list
     h2
         margin-bottom: 100px
-    
+
     .wrap
         justify-content: center
         // gap: 1%
@@ -201,29 +201,35 @@
         .wrap
             align-items: stretch
 
-    .item
-        width: 25%
+    .cat-item
+        width: 33.3%
+        cursor: pointer
         display: inline-block
         padding: 20px
         border-right: 1px solid rgba(0, 0, 0, .4)
         border-bottom: 1px solid rgba(0, 0, 0, .4)
         img
             width: 90%
-            height: 150px
+            height: 250px
             object-fit: contain
             display: block
             margin: 0 auto 20px
-            transition: inherit
+            transition: .3s ease all 
 
-        span
+        &__heading
             font-size: 20px
-            transition: inherit
+            transition: .3s ease all 
             font-style: normal
             font-weight: 700
             text-transform: uppercase
+            margin: 0
+        &__text
+            margin: 0
+            b
+                font-weight: normal
 
         &:hover
-            opacity: 1
+            opacity: 1 !important
             & > *
                 opacity: .5
 
@@ -528,11 +534,11 @@
         h2
             margin-bottom: 30px
             text-align: center
-       
+
         .wrap
             max-width: 700px
             margin: 0 auto
-        
+
         .item
             width: 30%
             max-width: unset
@@ -554,7 +560,7 @@
             &-title
                 display: block
 
-        .item
+        .cat-item
             .img
                 width: 95%
                 margin-bottom: 10px
@@ -691,7 +697,7 @@
                     transform: translateY(-30px)
 
     .catalog
-        .item
+        .cat-item
             padding: 10px
             width: 50%
             span
