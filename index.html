@@ -156,14 +156,48 @@
             <div class="right">
                 <div class="catalog-content" id="cat-1">
                     <div class="wrap cat-item-wrap">
-                        <div class="cat-item">
-                            <img class="cat-item__img" src="img/F-2.jpg" alt="item">
-                            <h3 class="cat-item__heading">ДВС GQ4Y</h3>
+                        <div class="cat-item" data-height="3,4.8,6" data-capacity="1.5,2,2.5,3,3.5">
+                            <img class="cat-item__img" src="img/f-4.jpg" alt="item">
+                            <h3 class="cat-item__heading">CPCD</h3>
+                            <p class="cat-item__text">Грузоподъемность: <b>от 1,5 до 3,5 тонн</b></p>
+                            <p class="cat-item__text">Двигатель: <b>YANMAR / Xichai / FAW </b></p>
+                        </div>
+                        <div class="cat-item" data-height="3,4.8,6" data-capacity="1.5,2,2.5,3,3.5">
+                            <img class="cat-item__img" src="img/f-3.jpg" alt="item">
+                            <h3 class="cat-item__heading">CPCD | ISUZU</h3>
                             <p class="cat-item__text">Грузоподъемность: <b>от 1,5 до 3,5 тонн</b></p>
                         </div>
-                        <div class="cat-item">
+                        <div class="cat-item" data-height="3,4.8,6" data-capacity="1.5,2,2.5,3,3.5">
+                            <img class="cat-item__img" src="img/f-4.jpg" alt="item">
+                            <h3 class="cat-item__heading">CPCD | XINCHA</h3>
+                            <p class="cat-item__text">Грузоподъемность: <b>от 1,5 до 3,5 тонн</b></p>
+                        </div>
+                        <div class="cat-item" data-height="3.6"
+                            data-capacity="3,3.5,4,4.5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10">
+                            <img class="cat-item__img" src="img/f-5.jpg" alt="item">
+                            <h3 class="cat-item__heading">Дизельные погрузчики <i>с боковой</i> загрузкой </h3>
+                            <p class="cat-item__text">Двигатель: <b>Isuzu YANMAR / Xichai / Weichai </b></p>
+                            <p class="cat-item__text">Грузоподъемность: <b>от 3 до 10 тонн</b></p>
+                        </div>
+                        <div class="cat-item" data-height="3,4.8,6"
+                            data-capacity="3,3.5,4,4.5,5.5,6,6.5,7,7.5,8,8.5,9,9.5,10">
+                            <img class="cat-item__img" src="img/f-6.jpg" alt="item">
+                            <h3 class="cat-item__heading">Дизельные погрузчики <i>OFF ROAD</i> </h3>
+                            <p class="cat-item__text">Двигатель: <b>YANMAR / Xichai / FAW </b></p>
+                            <p class="cat-item__text">Грузоподъемность: <b>от 3 до 10 тонн</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-content" id="cat-2">
+                    <div class="wrap cat-item-wrap">
+                        <div class="cat-item" data-height="3,4.8,6" data-capacity="1.5,2,2.5,3,3.5">
+                            <img class="cat-item__img" src="img/F-2.jpg" alt="item">
+                            <h3 class="cat-item__heading">CPQD | GQ4Y</h3>
+                            <p class="cat-item__text">Грузоподъемность: <b>от 1,5 до 3,5 тонн</b></p>
+                        </div>
+                        <div class="cat-item" data-height="3,4.8,6" data-capacity="1.5,2,2.5,3,3.5">
                             <img class="cat-item__img" src="img/f-1.jpg" alt="item">
-                            <h3 class="cat-item__heading">ДВС NISSAN GCT GK25</h3>
+                            <h3 class="cat-item__heading">CPQD | NISSAN GCT GK25</h3>
                             <p class="cat-item__text">Грузоподъемность: <b>от 1,5 до 3,5 тонн</b></p>
                         </div>
                     </div>
@@ -463,56 +497,35 @@
                 <div class="cat-content"></div>
                 <fieldset>
                     <p class="modal__text">Грузоподъемность</p>
-                    <div class="radio">
-                        <input type="radio" value="1,5 тонн" name="capacity" id="capacity1">
-                        <label for="capacity1">1,5 тонн</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" value="3,5 тонн" name="capacity" id="capacity2">
-                        <label for="capacity2">3,5 тонн</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" value="6 метров" name="capacity" id="capacity3">
-                        <label for="capacity3">6 метров</label>
-                    </div>
+                    <div id="radio-buttons" class="wrap"></div>
                 </fieldset>
                 <fieldset>
                     <p class="modal__text">Высота подъема</p>
-                    <div class="radio">
-                        <input type="radio" value="3 метра" name="height" id="height1">
-                        <label for="height1">3 метра</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" value="4,8 метров" name="height" id="height2">
-                        <label for="height2">4,8 метров</label>
-                    </div>
-                    <div class="radio">
-                        <input type="radio" value="6 метров" name="height" id="height3">
-                        <label for="height3">6 метров</label>
-                    </div>
+                    <div id="checkbox-buttons" class="wrap"></div>
                 </fieldset>
                 <fieldset>
                     <p class="modal__text">Дополнительные опции</p>
-                    <div class="checkbox">
-                        <input type="checkbox" value="Свободный ход" name="equipment" id="equipment">
-                        <label for="equipment">Свободный ход</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" value="Кабина с отопителем" name="сabin" id="сabin">
-                        <label for="сabin">Кабина с отопителем</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" value="Навесное оборудовани" name="eq" id="eq">
-                        <label for="eq">Навесное оборудовани</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" value="Смещение вил" name="offcet" id="offcet">
-                        <label for="offcet">Смещение вил</label>
+                    <div class="wrap">
+                        <div class="checkbox">
+                            <input type="checkbox" value="Свободный ход" name="equipment" id="equipment">
+                            <label for="equipment">Свободный ход</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" value="Кабина с отопителем" name="сabin" id="сabin">
+                            <label for="сabin">Кабина с отопителем</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" value="Навесное оборудовани" name="eq" id="eq">
+                            <label for="eq">Навесное оборудовани</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" value="Смещение вил" name="offcet" id="offcet">
+                            <label for="offcet">Смещение вил</label>
+                        </div>
                     </div>
                 </fieldset>
                 <div class="wrap">
                     <button class="btn black">Заказать</button>
-                    <!-- <button class="btn btn-outline">нужна консультация</button> -->
                 </div>
             </div>
             <button class="modal-close">&#x2715;</button>

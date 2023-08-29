@@ -84,10 +84,6 @@
         text-align: center
         position: relative
         z-index: 1
-        border: 1px solid rgba(0, 0, 0, 0)
-        border-top: none
-        border-bottom-color: #000
-        padding-bottom: 40px
         transition: all ease .3s
         &::after
             content: ''
@@ -99,10 +95,10 @@
             background-position: center bottom
             opacity: 0
             position: absolute
-            bottom: 20px
+            bottom: 0
             transform: translateY(40px)
-            transition: inherit
             pointer-events: none
+            transition: .3s ease all
 
         .img
             width: 100%
@@ -114,8 +110,8 @@
             position: relative
             z-index: 1
             margin-bottom: 15px
-            transition: inherit
             img
+                transition: .3s ease all
                 max-width: 75%
                 max-height: 95%
                 position: relative
@@ -123,7 +119,7 @@
                 object-fit: contain
 
             &::before
-                transition: inherit
+                transition: .3s ease all
                 content: ''
                 display: block
                 width: 90%
@@ -143,18 +139,29 @@
         &:hover,
         &.active
             opacity: 1
-            border-color: #000
-            border-bottom-color: rgba(0, 0, 0, 0)
             text-decoration: underline
-            .img, p
+            img, p
                 transform: translateY(-60px)
             &::after
                 opacity: 1
                 transform: translateY(0px)
             .img
-                padding: 0
+                // padding: 0
                 &::before
                     opacity: 0
+
+        @media screen and ( min-width: 1200px )
+            border: 1px solid rgba(0, 0, 0, 0)
+            border-top: none
+            border-bottom-color: #000
+            padding-bottom: 40px
+            &::after
+                bottom: 20px
+
+            &:hover,
+            &.active
+                border-color: #000
+                border-bottom-color: rgba(0, 0, 0, 0)
 
 .catalog
     display: none
@@ -206,25 +213,30 @@
         cursor: pointer
         display: inline-block
         padding: 20px
-        border-right: 1px solid rgba(0, 0, 0, .4)
-        border-bottom: 1px solid rgba(0, 0, 0, .4)
+        border: 1px solid #dddddd
+        margin: -1px 0 0 -1px
         img
             width: 90%
             height: 250px
             object-fit: contain
             display: block
             margin: 0 auto 20px
-            transition: .3s ease all 
+            transition: .3s ease all
 
         &__heading
             font-size: 20px
-            transition: .3s ease all 
+            transition: .3s ease all
             font-style: normal
             font-weight: 700
             text-transform: uppercase
-            margin: 0
-        
+            margin: 0 0 3px
+            i 
+                font-style: normal
+                white-space: nowrap
+
         &__text
+            font-size: 14px
+            opacity: .8
             margin: 0
 
         &:hover
@@ -234,9 +246,6 @@
 
         &-wrap
             justify-content: flex-start
-            border-top: 1px solid rgba(0, 0, 0, .4)
-            border-left: 1px solid rgba(0, 0, 0, .4)
-
     .heading,
     .text
         max-width: 44%
@@ -500,6 +509,7 @@
 
         &__img
             width: 100%
+            max-width: 100%
             position: static
             background-image: url('../img/main-bg.jpg')
             background-repeat: no-repeat
@@ -529,7 +539,7 @@
             color: #000
 
     .list
-        padding-top: 0
+        padding: 0
         h2
             margin-bottom: 30px
             text-align: center
@@ -538,9 +548,23 @@
             max-width: 700px
             margin: 0 auto
 
+            // ------- scrol
+            justify-content: flex-start
+            max-width: 100vw
+            flex-wrap: nowrap
+            width: 100vw
+            position: relative
+            overflow-x: scroll
+            padding: 20px 10px 40px
+
         .item
             width: 30%
             max-width: unset
+
+            // ------- scrol
+            width: 28vw
+            min-width: 28vw
+
             .img
                 height: 190px
 
@@ -560,9 +584,8 @@
                 display: block
 
         .cat
-                
             &-item
-                width: 100%
+                width: 50%
                 .img
                     width: 95%
                     margin-bottom: 10px
@@ -570,9 +593,9 @@
                 span
                     font-size: 16px
 
-                &-wrap 
-                    max-width: 500px 
-                    margin: 0 auto 
+                &-wrap
+                    max-width: 800px
+                    margin: 0 auto
 
     .faq
         h2
@@ -682,33 +705,46 @@
             font-size: 16px
 
     .list
-        padding: 0 15px 50px
+        padding: 0 0 50px
         .wrap
             justify-content: space-between
 
         .item
             width: 49%
             margin-bottom: 30px
+
+            width: 45vw
+            min-width: 45vw
+            margin: 0
+            padding-bottom: 10px
+
             &::after
                 height: 30px
                 background-size: contain
+
             .img
                 height: 160px
+
             p
                 font-size: 15px
 
             &:hover,
             &.active
-                .img, p
+                .img img, p
                     transform: translateY(-30px)
 
     .catalog
         .cat-item
             padding: 10px
-            width: 50%
+            width: 100%
+
             span
                 font-weight: 600
                 font-size: 14px
+
+            &-wrap
+                max-width: 400px
+                margin: 0 auto
 
     .guarantee
         h2

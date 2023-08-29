@@ -326,9 +326,13 @@ fieldset
     margin: 0 0 20px
     padding: 0
 
+    .wrap
+        justify-content: flex-start
+        gap: 5px !important
+        margin: 0 !important
+
 .checkbox, .radio
     display: inline-block
-    margin-bottom: 5px !important
     label
         cursor: pointer
         display: block
@@ -367,8 +371,11 @@ fieldset
                 background-color: rgba($yelow, 1)
 
 .radio
+    display: inline-block
+    margin: 0
     label
         padding: 8px 10px 6px
+        margin: 0
         &::before,
         &::after
             display: none
@@ -534,7 +541,6 @@ textarea
 @media screen and ( max-width: 900px )
     h1
         // font-size: 36px
-
 
     fieldset
         margin-bottom: 10px

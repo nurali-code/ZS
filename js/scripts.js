@@ -6,13 +6,50 @@ $(document).ready(function () {
     /*-------------------------------------------------end*/
 
     $('.btn_catalog').on('click', function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         const catalog = $(this).attr("href");
         $('.btn_catalog').removeClass('active')
         $(this).addClass('active')
-        $('.catalog').show(0);
+        $('.catalog').show();
         $('.catalog-content').not(catalog).hide(0);
         $(catalog).fadeIn(300);
+    });
+
+    $('.cat-item').on('click', function () {
+        $('#radio-buttons, #checkbox-buttons').empty();
+        var heights = $(this).attr('data-height').split(',');
+        var capacity = $(this).attr('data-capacity').split(',');
+        var radioContainer = $('#radio-buttons');
+        var checkboxContainer = $('#checkbox-buttons');
+        for (var i = 0; i < heights.length; i++) {
+            var checkboxDiv = $('<div>').addClass('radio');
+            var radioInput = $('<input>').attr({
+                type: 'radio',
+                value: heights[i] + ' метров',
+                name: 'height',
+                id: 'height' + (i + 1)
+            });
+            var radioLabel = $('<label>').attr('for', 'height' + (i + 1)).text(heights[i] + ' метров');
+            checkboxDiv.append(radioInput);
+            checkboxDiv.append(radioLabel);
+            checkboxContainer.append(checkboxDiv);
+        }
+        for (var i = 0; i < capacity.length; i++) {
+            var radioDiv = $('<div>').addClass('radio');
+            var checkboxInput = $('<input>').attr({
+                type: 'radio',
+                value: capacity[i] + ' тонн',
+                name: 'capacity',
+                id: 'capacity' + (i + 1)
+            });
+            var checkboxLabel = $('<label>').attr('for', 'capacity' + (i + 1)).text(capacity[i] + ' тонн');
+            radioDiv.append(checkboxInput);
+            radioDiv.append(checkboxLabel);
+            radioContainer.append(radioDiv);
+        }
+        var itemContent = $(this).html();
+        $('#modal-card .cat-content').html(itemContent);
+        $('#modal-card').fadeIn(300);
     });
 
     /*-------------------------------------------------end*/
@@ -33,12 +70,10 @@ $(document).ready(function () {
             showModal('#' + $(this).attr("data-modal"));
         });
 
-        $('.cat-item').on('click', function (e) {
-            e.preventDefault();
-            var itemContent = $(this).html();
-            $('#modal-card .cat-content').html(itemContent);
-            $('#modal-card').fadeIn(300);
-        });
+        // $('.cat-item').on('click', function (e) {
+        //     e.preventDefault();
+
+        // });
 
         $('.modal-close').on('click', () => { hideModals(); });
 
